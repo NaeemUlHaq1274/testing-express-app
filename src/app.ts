@@ -1,9 +1,7 @@
 import express from "express";
-import { jsonResponseMiddleware } from "./middlewares/json-response";
-import postingRouter from "./routes/postingRoutes";
-import authRoutes from "./routes/authRoutes";
 import { configuration } from "./configuration";
-import { errorHandler, notFound, rateLimitMiddleware } from "./middlewares";
+import { authRoutes, postingRouter } from "./routes";
+import { errorHandler, jsonResponseMiddleware, notFound, rateLimitMiddleware } from "./middlewares";
 
 const app = express();
 

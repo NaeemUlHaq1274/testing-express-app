@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { handleValidationError, validateLogin, validateRegister } from "../middlewares/validations/authValidator";
-import { loginUser, registerUser } from "../controllers/authController";
+import { loginUser, registerUser } from "../controllers";
+import { handleValidationError, validateLogin, validateRegister } from "../middlewares";
 
 const authRoutes = Router();
 
@@ -8,4 +8,4 @@ authRoutes.post("/register", validateRegister, handleValidationError, registerUs
 
 authRoutes.post("/login", validateLogin, handleValidationError, loginUser);
 
-export default authRoutes;
+export { authRoutes };

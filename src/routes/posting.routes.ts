@@ -1,9 +1,9 @@
 import app from "../app";
-import { createPost } from "../controllers/postController";
 import { Router } from "express";
+import { createPost } from "../controllers";
 
 const postingRouter = Router();
 
 postingRouter.post("/posting", createPost);
 
-export default postingRouter;
+export { postingRouter };
